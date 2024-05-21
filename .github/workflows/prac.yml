@@ -1,8 +1,7 @@
 name: file upload to blob
-
 on:
  workflow_dispatch:
-
+ 
 jobs:
   upload-azure-storage:
         name : copy-files-to-blob :
