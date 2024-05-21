@@ -4,7 +4,7 @@ on:
  workflow_dispatch:
 
 jobs:
-
+  upload-azure-storage:
         name : copy-files-to-blob :
         runs-on: ubuntu-latest
         steps:
