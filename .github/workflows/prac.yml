@@ -4,7 +4,8 @@ name: file upload to blob
 
 on:
   push:
-    branches: [ "main" ]
+    branches
+      -main
 
 jobs:
 
