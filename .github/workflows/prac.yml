@@ -1,4 +1,4 @@
-#this code uploads files from local repo to azure storage blob
+#this  code uploads files from local repo to azure storage blob
 
 name: file upload to blob
 
