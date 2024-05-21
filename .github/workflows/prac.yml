@@ -4,7 +4,7 @@ on:
  
 jobs:
   upload-azure-storage:
-        name : copy-files-to-blob :
+        name : copy-files-to-blob 
         runs-on: ubuntu-latest
         steps:
       
