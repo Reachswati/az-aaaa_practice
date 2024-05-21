@@ -1,11 +1,7 @@
-#this code uploads files from local repo to azure storage blob
-
-name: azure file upload
+name: file upload to blob
 
 on:
-  push:
-    branches:
-      - main
+ workflow_dispatch:
 
 jobs:
 
@@ -13,14 +9,15 @@ jobs:
         runs-on: ubuntu-latest
         steps:
       
-          - name: Azure Login
-            uses: azure/login@v2
-            with:
+        - name: Azure Login
+          uses: azure/login@v2
+          with:
               creds: ${{ secrets.AZURE_CREDENTIALS }}
       
-          - name: Azure CLI script
-            uses: azure/cli@v2
-            with:
+        - name: Azure CLI script
+          uses: azure/cli@v2
+          with:
               azcliversion: latest
               inlineScript: |
                 az storage blob upload-batch --account-name rg1 -d test --destination path https://rg1.blob.core.windows.net/test -s my-folder  
+ 
