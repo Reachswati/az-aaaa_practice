@@ -1,11 +1,11 @@
 #this code uploads files from local repo to azure storage blob
 
-name: file upload to blob
+name: azure file upload
 
 on:
   push:
-    branches
-      -main
+    branches:
+      - main
 
 jobs:
 
